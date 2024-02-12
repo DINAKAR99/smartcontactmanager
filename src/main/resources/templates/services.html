@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li><a href="" th:href="@{/home}">Home</a></li>
+      <li><a href="" th:href="@{/about}">About</a></li>
+      <li><a href="" th:href="@{/services}">Services</a></li>
+    </ul>
+    <h1>This is services page</h1>
+    <div>
+      <div th:if="${session.message1}">
+        <h1 th:text="${session.message1}"></h1>
+      </div>
+
+      <!-- <th:block
+        th:text="${@SessionHelper.removeMessageFromSession()}"
+      ></th:block> -->
+    </div>
+  </body>
+</html>

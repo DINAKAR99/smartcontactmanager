@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  th:replace="~{base::layout(~{::section})}"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="banner justify-content-center align-items-center d-flex">
+      <div class="text-center">
+        <h1 class="font-weight-bold">Smart Contact Manager</h1>
+        <h1>This is home page</h1>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+          obcaecati deserunt qui neque nesciunt dicta. Voluptatum asperiores
+          enim in! Voluptatibus ab nostrum recusandae, totam alias quas optio ex
+          aliquam in mollitia amet quis, nesciunt quia rerum quae dignissimos?
+          Soluta fuga cum molestias iste quo eaque consequatur necessitatibus
+          minima temporibus placeat.
+        </p>
+
+        <div th:if="${session.message1}">
+          <h1 th:text="${session.message1}"></h1>
+        </div>
+
+        <button class="btn btn-lg bg-primary text-white">Get Start</button>
+      </div>
+    </section>
+  </body>
+</html>
